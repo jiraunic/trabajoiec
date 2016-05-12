@@ -13,7 +13,7 @@ $count=0;
 $sql="SELECT Nombre_usuario, pass from usuarios where Nombre_usuario='$user' and pass='$password';";
 echo "vamos bien, antes de entrar en if : ";
 
-if ($result=mysql_query($sql))
+if ($result=mysqli_query($sql))
   {printf("Entramos al if : ");
   while ($obj=mysqli_fetch_object($result))
     { echo "Entramos al while : ";
