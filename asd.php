@@ -4,8 +4,7 @@ if (mysqli_connect_errno()) {
     printf("Falló la conexión: %s\n", mysqli_connect_error());
     exit();
 }
-else
-{
+
 // Check connection
 $user=$_POST['user'];
 $password = $_POST['password'];
@@ -14,7 +13,7 @@ $count=0;
 $sql="SELECT Nombre_usuario, pass from usuarios where Nombre_usuario='$user' and pass='$password';";
 echo "vamos bien, antes de entrar en if : ";
 
-if ($result=mysqli_query($con,$sql))
+if ($result=mysql_query($sql))
   {printf("Entramos al if : ");
   while ($obj=mysqli_fetch_object($result))
     { echo "Entramos al while : ";
@@ -30,5 +29,5 @@ else
 {
  // header("location:inde.php"); 
 }
-}
+
 ?>
