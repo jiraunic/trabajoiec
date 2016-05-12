@@ -16,6 +16,7 @@ if ($result=mysqli_query($con,$sql))
   while ($obj=mysqli_fetch_object($result))
     {
       $count=$count+1;
+      echo $count;
     }
 
 }
@@ -24,7 +25,7 @@ if ($count==1) {
 }
 else
 {
-  header("location:inde.php"); 
+ // header("location:inde.php"); 
 }
 
 ?>
