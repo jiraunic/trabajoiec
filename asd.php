@@ -9,7 +9,7 @@ $user=$_POST['user'];
 $password = $_POST['password'];
 
 $count=0;
-$sql="select Nombre_usuario,pass from usuarios where Nombre_usuario='$user' and pass='$password'";
+$sql="select Nombre_usuario,pass from usuarios where Nombre_usuario='$user' and pass='$password';";
 echo "vamos bien, antes de entrar en if : ";
 $result=mysqli_query($con,$sql);
  printf("se devolvio  %d filas.\n", mysqli_num_rows($result));
