@@ -13,6 +13,8 @@ $sql="select Nombre_usuario,pass from usuarios where Nombre_usuario='$user' and 
 echo "vamos bien, antes de entrar en if : ";
 $result=mysqli_query($con,$sql);
  printf("se devolvio  %d filas.\n", mysqli_num_rows($result));
+ echo $user;
+ echo $password;
 if ($result=mysqli_query($con,$sql))
   {echo "Entramos al if : ";
   while ($obj=mysqli_fetch_object($result))
