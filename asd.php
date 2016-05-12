@@ -4,6 +4,8 @@ if (mysqli_connect_errno()) {
     printf("Falló la conexión: %s\n", mysqli_connect_error());
     exit();
 }
+else
+{
 // Check connection
 $user=$_POST['user'];
 $password = $_POST['password'];
@@ -28,5 +30,5 @@ else
 {
  // header("location:inde.php"); 
 }
-
+}
 ?>
