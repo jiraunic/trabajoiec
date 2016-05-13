@@ -12,18 +12,11 @@ $password = $_POST['password'];
 $count=0;
 $sql="select * from usuarios; ";
 echo "vamos bien, antes de entrar en if : ";
-$result=mysqli_query($con, $sql);
-printf("La seleccion devolvio %d filas.\n", mysqli_num_rows($result));
+$result = mysqli_prepare($con, $sql);
+$count =  mysqli_stmt_execute($result);
+echo $count;
 
-if ($result=mysqli_query($con, $sql))
-  {printf("Entramos al if : ");
-  while ($obj=mysqli_fetch_object($result))
-    { echo "Entramos al while : ";
-      $count=$count+1;
-      echo $count;
-    }
 
-}
 if ($count==1) {
     //header("location:inicio.php");  
 }
