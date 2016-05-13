@@ -10,15 +10,14 @@ $user=$_POST['user'];
 $password = $_POST['password'];
 
 $count=0;
-$sql="SELECT Nombre_usuario, pass from usuarios where Nombre_usuario='$user' and pass='$password';";
+$sql="SELECT Nombre_usuario, pass from usuarios where Nombre_usuario='$user' and pass='$password'";
 echo "vamos bien, antes de entrar en if : ";
+$result=mysqli_query($con, $sql);
+printf("La seleccion devolvio %d filas.\n", mysqli_num_rows($result));
 
-$result=mysql_query($sql);
-echo mysql_num_rows($result);
-
-if ($result=mysql_query($sql))
+if ($result=mysqli_query($con, $sql))
   {printf("Entramos al if : ");
-  while ($obj=mysql_fetch_object($result))
+  while ($obj=mysqli_fetch_object($result))
     { echo "Entramos al while : ";
       $count=$count+1;
       echo $count;
