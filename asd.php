@@ -1,9 +1,8 @@
 <?php
 include_once "conexion.php";
-if (mysqli_connect_errno()) {
-    printf("Falló la conexión: %s\n", mysqli_connect_error());
-    exit();
-}
+
+    printf("Fallo la conexion: %s\n", mysqli_connect_error());
+
 
 // Check connection
 $user=$_POST['user'];
