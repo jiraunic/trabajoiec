@@ -14,8 +14,8 @@ $sql="select * from usuarios";
 echo "vamos bien, antes de entrar en if : ";
 $result=mysql_query($sql);
 printf("La seleccion devolvio %d filas.\n", mysql_num_rows($result));
-
-if ($result=mysql_query($con, $sql))
+/*
+if ($result=mysql_query($sql))
   {printf("Entramos al if : ");
   while ($obj=mysql_fetch_object($result))
     { echo "Entramos al while : ";
@@ -31,5 +31,5 @@ else
 {
  // header("location:inde.php"); 
 }
-
+*/
 ?>
