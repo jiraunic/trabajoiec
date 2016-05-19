@@ -6,5 +6,6 @@ $conn = mysql_connect(
   'toor',     // password
   'iec', // database name
   null
-  ) or die(echo 'error de conexion');
+  ) or die(mysql_error());
+mysql_select_db('iec', $conn) or die (mysql_error());
 ?>

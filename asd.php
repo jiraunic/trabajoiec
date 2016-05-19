@@ -1,5 +1,5 @@
 <?php
-include_once "conexion.php";
+include_once "Conexion.php";
 // Check connection
 $user=$_POST['user'];
 $password = $_POST['password'];
