@@ -1,10 +1,8 @@
 <?php
-$con =mysqli_connect(
-  '173.194.225.117', // host
+// Using MySQL API (connecting from App Engine)
+$conn = mysql_connect(':/cloudsql/serviciosnubetec:basededatosiec',
   'root', // username
-  'toor',     // password
-  'iec', // database name
-  null,
-  '/cloudsql/serviciosnubetec:basededatosiec'
-  );
+  'toor'      // password
+  ) or die(mysql_error());
+mysql_select_db('iec', $conn) or die (mysql_error());
 ?>
