@@ -10,7 +10,7 @@ $user=$_POST['user'];
 $password = $_POST['password'];
 
 $count=0;
-$sql="select * from usuarios";
+$sql="SELECT * from usuarios";
 echo "vamos bien, antes de entrar en if : ";
 $result=mysql_query($sql);
 printf("La seleccion devolvio %d filas.\n", mysql_num_rows($result));
