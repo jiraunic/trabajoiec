@@ -6,9 +6,8 @@ include_once "Conexion.php";
 //$count=0;
 $sql="SELECT * from usuarios";
 echo "vamos bien, antes de entrar en if : ";
-$result=mysql_query($sql);
-printf("La seleccion devolvio %d filas.\n", mysql_num_rows($result));
-/*
+
+
 if ($result=mysql_query($sql))
   {printf("Entramos al if : ");
   while ($obj=mysql_fetch_object($result))
@@ -19,11 +18,11 @@ if ($result=mysql_query($sql))
 
 }
 if ($count==1) {
-    //header("location:inicio.php");  
+    header("location:inicio.php");  
 }
 else
 {
- // header("location:inde.php"); 
+ header("location:inde.php"); 
 }
-*/
+
 ?>
