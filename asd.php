@@ -15,7 +15,7 @@ if ($result=mysql_query($sql))
 }
 if ($count==1) {
 	echo "Entramos al if correctamente";
-   header('Location: Inicio.php');
+   header('Location:inicio.php');
 }
 else
 {

@@ -13,7 +13,7 @@ if(isset($_POST['relacionar']))
                 $mater = $_POST['materia'];
                               
                 $sql = "INSERT INTO maestromateria(id_materia, id_maestro) VALUES ('$mater', '$maest')";
-                mysqli_query($con, $sql);
+                mysql_query($sql);
                 echo 'Registro agregado con exito.';   
             }
 }

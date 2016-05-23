@@ -3,38 +3,38 @@ include_once "conexion.php";
 $nocont = $_POST['nocontrol'];
 
 function imprimir()
-{   global $con;
+{   
 	$nocont = $_POST['nocontrol'];
     $sql2="SELECT documentos.descripcion_documento, catalogoestatus.descripcion_estatus FROM documentos inner JOIN alumnodocumento on documentos.id_documento=alumnodocumento.id_documento inner JOIN catalogoestatus on alumnodocumento.id_estatus=catalogoestatus.id_estatus where alumnodocumento.id_alumno='$nocont' ORDER BY documentos.id_documento";
-	$result =  mysqli_query($con, $sql2); 
+	$result =  mysql_query($sql2); 
     echo "<table border = '1'> \n"; 
     echo "<tr><td>Documento</td><td>Estatus del documento</td></tr> \n"; 
-    while ($row = mysqli_fetch_row($result)){ 
+    while ($row = mysql_fetch_row($result)){ 
        echo "<tr><td>$row[0]</td><td>$row[1]</td></tr> \n"; 
 } 
     echo "</table></br> \n";
 }
 	$sql2="SELECT CONCAT(nombre_alumno, ' ', apellido_alumno) FROM alumnos where id_alumno='$nocont'";
-	$res =  mysqli_query($con, $sql2); 
-	$row = mysqli_fetch_row($res);
+	$res =  mysql_query($sql2); 
+	$row = mysql_fetch_row($res);
 	$valor = $row[0];
 	$valor2 = $nocont;
 
 	$sql="SELECT * FROM catalogoestatus";
-	$result =  mysqli_query($con, $sql); 
+	$result =  mysql_query($sql); 
 
     $combobit=" <option value='0'></option>";
     $numero =0;
-    while ($row = mysqli_fetch_row($result)){ 
+    while ($row = mysql_fetch_row($result)){ 
         $combobit .=" <option value='".$row[0]."'>".$row[1]."</option>";
     }
 
     $sql="SELECT * FROM documentos ";
-    $result =  mysqli_query($con, $sql); 
+    $result =  mysql_query($sql); 
 
     $combobit3 =" <option value='0'></option>";
     $numero =0;
-    while ($row = mysqli_fetch_row($result)){ 
+    while ($row = mysql_fetch_row($result)){ 
         $combobit3 .=" <option value='".$row[0]."'>".$row[1]."</option>";
     }
 	imprimir();    

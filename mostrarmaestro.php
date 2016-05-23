@@ -4,10 +4,10 @@ include_once "conexion.php";
 if(isset($_POST['buscar']))
 {	
 	$nomb=$_POST['nombre'];
-	$result = mysqli_query($con, "SELECT id_maestro, CONCAT(nombre_maestro,' ', apellido_maestro) AS nombrecompleto FROM maestros where nombre_maestro like '%$nomb%'"); 
+	$result = mysql_query("SELECT id_maestro, CONCAT(nombre_maestro,' ', apellido_maestro) AS nombrecompleto FROM maestros where nombre_maestro like '%$nomb%'"); 
 	echo "<table border = '1'> \n"; 
 	echo "<tr><td>ID Maestro</td><td>Nombre Maestro</td></tr> \n"; 
-	while ($row = mysqli_fetch_row($result)){ 
+	while ($row = mysql_fetch_row($result)){ 
        echo "<tr><td>$row[0]</td><td>$row[1]</td></tr> \n"; 
 } 
 	echo "</table></br> \n";

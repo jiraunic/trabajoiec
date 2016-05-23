@@ -2,11 +2,11 @@
 include_once "conexion.php";
 
 $sql="SELECT id_alumno, concat(nombre_alumno, ' ', apellido_alumno) FROM `alumnos` WHERE area='Secretariado'";
-    $result =  mysqli_query($con, $sql); 
+    $result =  mysql_query($sql); 
 
     $combobit3 =" <option value='0'></option>";
     $numero =0;
-    while ($row = mysqli_fetch_row($result)){ 
+    while ($row = mysql_fetch_row($result)){ 
         $combobit3 .=" <option value='".$row[0]."'>".$row[1]."</option>";
     }
 ?>

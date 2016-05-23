@@ -12,7 +12,7 @@ if(isset($_POST['documentacion']))
     {
         $desc = $_POST['documento'];
         $sql = "INSERT INTO documentos (descripcion_documento) VALUES ('$desc')";
-        mysqli_query($con, $sql);
+        mysql_query($sql);
         echo 'Documento agregado con exito.';   
     }
 }

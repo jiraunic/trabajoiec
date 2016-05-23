@@ -11,8 +11,8 @@ if(isset($_POST['Alumno']))
     {   
         $año= DATE('Y');
         $sql2 = "SELECT id_Alumno from alumnos where id_Alumno like '$año%' ORDER BY id_Alumno Desc" ;
-        $alum=mysqli_query($con, $sql2);
-        $row = mysqli_fetch_row($alum);
+        $alum=mysql_query($sql2);
+        $row = mysql_fetch_row($alum);
        
         if($row[0]!=null)
         {
@@ -37,11 +37,9 @@ if(isset($_POST['Alumno']))
         $pag= $_POST['idpago'];
         $cout=$_POST['cantidad'];
         $sql = "INSERT INTO `Alumnos` (`Id_alumno`, `nombre_alumno`, `apellido_alumno`, `calle`, `no_exterior`, `no_interior`, `colonia`, `codigo_postal`, `estado`, `municipio`, `area`) VALUES ('$nocontrol','$nombre', '$apellido', '$calle', '$no_exterior', '$no_interior', '$colonia', '$codigo', '$esta', '$muni', '$area')";
-        mysqli_query($con, $sql);
+        mysql_query($sql);
         $sql2 = "INSERT INTO `convenio` (`id_alumno`, `cuota`, `id_pago`) VALUES ('$nocontrol', '$cout', '$pag')";
-        mysqli_query($con, $sql2);
-
- 
+        mysql_query($sql2);
         echo "Registro realizado correctamente, alumno agregado con numero de control: '$nocontrol'.";  
                 
     }

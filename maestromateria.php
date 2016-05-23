@@ -2,20 +2,20 @@
 include_once "conexion.php";
 
 $sql="SELECT id_materia, Nombre_Materia from materias where area = 'Preparatoria'";
-$result =  mysqli_query($con, $sql); 
+$result =  mysql_query($sql); 
 
     $combobit=" <option value='0'></option>";
     $numero =0;
-    while ($row = mysqli_fetch_row($result)){ 
+    while ($row = mysql_fetch_row($result)){ 
         $combobit .=" <option value='".$row[0]."'>".$row[1]."</option>";
     }
 
     $sql="SELECT id_maestro, concat(nombre_maestro, ' ', apellido_maestro) FROM `maestros` where tipo_maestro= 'Preparatoria'";
-    $result =  mysqli_query($con, $sql); 
+    $result =  mysql_query($sql); 
 
     $combobit2=" <option value='0'></option>";
     $numero =0;
-    while ($row = mysqli_fetch_row($result)){ 
+    while ($row = mysql_fetch_row($result)){ 
         $combobit2 .=" <option value='".$row[0]."'>".$row[1]."</option>";
     }
 
