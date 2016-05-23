@@ -152,12 +152,6 @@ $fecha = $dia." de ".$mes." de ".$ano;
 
 $import = $import.".00";
 
-echo $nocontrol;
-echo $movimiento ;
-echo $tipomovimiento;
-echo $import;
-echo $mespag ;
-
 
 
 // creacion del documento PDF como reporte de pago de alumno

@@ -1,10 +1,9 @@
 <?php
 include_once "Conexion.php";
-// Check connection
-$user=$_POST['user'];
-$password = $_POST['password'];
+//$user=$_POST['user'];
+//$password = $_POST['password'];
 
-$count=0;
+//$count=0;
 $sql="SELECT * from usuarios";
 echo "vamos bien, antes de entrar en if : ";
 $result=mysql_query($sql);
