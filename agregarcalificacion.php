@@ -3,7 +3,7 @@ include_once "conexion.php";
 
 
     $sql = "SELECT id_materia, Nombre_Materia from materias where area ='Preparatoria'";
-    $result =  mysql_query($sql)
+    $result =  mysql_query($sql);
     echo mysql_num_rows($result);
         $combobit=" <option value='0'></option>";
         while ($row = mysql_fetch_row($result)){ 
