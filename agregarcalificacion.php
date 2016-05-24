@@ -2,13 +2,13 @@
 include_once "conexion.php";
 
     $sql="SELECT * from materias where area ='Preparatoria'";
-    $result =  mysql_query($sql); 
-    printf($result);
-    $combobit=" <option value='0'></option>";
-    while ($row = mysql_fetch_row($result)){ 
-        $combobit .=" <option value='".$row[0]."'>".$row[1]."</option>";
+    if ($result =  mysql_query($sql))
+    {echo "entramos al primer if";
+        $combobit=" <option value='0'></option>";
+        while ($row = mysql_fetch_row($result)){ 
+            $combobit .=" <option value='".$row[0]."'>".$row[1]."</option>";
+        }
     }
-
     $sql="SELECT id_maestro, concat(nombre_maestro, ' ', apellido_maestro) FROM `maestros` where tipo_maestro='Preparatoria'";
     $result =  mysql_query($sql); 
 
