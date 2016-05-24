@@ -2,8 +2,8 @@
 include_once "conexion.php";
 
     $sql="SELECT * from materias where area ='Preparatoria'";
-    $result =  mysql_query($sql) or die mysql_error(); 
-
+    $result =  mysql_query($sql); 
+    printf($result);
     $combobit=" <option value='0'></option>";
     while ($row = mysql_fetch_row($result)){ 
         $combobit .=" <option value='".$row[0]."'>".$row[1]."</option>";
