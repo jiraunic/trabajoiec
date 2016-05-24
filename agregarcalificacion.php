@@ -26,7 +26,9 @@ include_once "conexion.php";
         $combobit3 .=" <option value='".$row[0]."'>".$row[1]."</option>";
     }
 ?>
+<!--
 <?php include("cabecera.php"); ?>
+
     <h1>Agregar Calificacion</h1>
     <form action="calificacion.php" method="post" class="Calificacion">
         <div><label>Materia</label></br>
@@ -86,3 +88,4 @@ include_once "conexion.php";
     <div><input name="Alumno" type="submit" value="Regresar a inicio"></div>
     </form>
 <?php include("pie.php"); ?>
+-->
