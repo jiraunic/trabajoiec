@@ -23,5 +23,5 @@ else
 {
   header("location:inde.php"); 
 }
-*/
+
 ?>
