@@ -2,10 +2,9 @@
 include_once "conexion.php";
 
     $sql="SELECT * from materias where area ='Preparatoria'";
-    $result =  mysql_query($sql); 
+    $result =  mysql_query($sql) or die mysql_error(); 
 
     $combobit=" <option value='0'></option>";
-    $numero =0;
     while ($row = mysql_fetch_row($result)){ 
         $combobit .=" <option value='".$row[0]."'>".$row[1]."</option>";
     }
@@ -14,7 +13,6 @@ include_once "conexion.php";
     $result =  mysql_query($sql); 
 
     $combobit2=" <option value='0'></option>";
-    $numero =0;
     while ($row = mysql_fetch_row($result)){ 
         $combobit2 .=" <option value='".$row[0]."'>".$row[1]."</option>";
     }
@@ -23,7 +21,6 @@ include_once "conexion.php";
     $result =  mysql_query($sql); 
 
     $combobit3 =" <option value='0'></option>";
-    $numero =0;
     while ($row = mysql_fetch_row($result)){ 
         $combobit3 .=" <option value='".$row[0]."'>".$row[1]."</option>";
     }
