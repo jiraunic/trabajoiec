@@ -1,5 +1,5 @@
 <?php
-include_once "conexion.php";
+include_once "Conexion.php";
 
 $sql="SELECT id_materia, Nombre_Materia from materias where area ='Secretariado'";
 $result =  mysql_query($sql); 

@@ -1,6 +1,6 @@
 
 <?php 
-include_once "conexion.php";
+include_once "Conexion.php";
  
 if(isset($_POST['buscaralumnocontrol']))
 {	

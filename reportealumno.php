@@ -1,5 +1,5 @@
 <?php
-include_once "conexion.php";
+include_once "Conexion.php";
 include ('fpdf181/fpdf.php');
 $dia = date('j');
 $mes = date('m');

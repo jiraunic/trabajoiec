@@ -1,10 +1,10 @@
 <?php
-include_once "conexion.php";
+include_once "Conexion.php";
 
 
     $sql = "SELECT id_materia, Nombre_Materia from materias where area ='Preparatoria'";
     $result =  mysql_query($sql);
-    echo $result;
+  
         $combobit=" <option value='0'></option>";
         while ($row = mysql_fetch_row($result)){ 
             $combobit .=" <option value='".$row[0]."'>".$row[1]."</option>";
@@ -26,7 +26,7 @@ include_once "conexion.php";
         $combobit3 .=" <option value='".$row[0]."'>".$row[1]."</option>";
     }
 ?>
-<!--
+
 <?php include("cabecera.php"); ?>
 
     <h1>Agregar Calificacion</h1>
@@ -88,4 +88,3 @@ include_once "conexion.php";
     <div><input name="Alumno" type="submit" value="Regresar a inicio"></div>
     </form>
 <?php include("pie.php"); ?>
--->

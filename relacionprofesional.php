@@ -1,5 +1,5 @@
 <?php
-include_once "conexion.php";
+include_once "Conexion.php";
 
 $sql="SELECT id_alumno, concat(nombre_alumno, ' ', apellido_alumno) FROM `alumnos` WHERE area='Profesional'";
     $result =  mysql_query($sql); 
