@@ -36,9 +36,9 @@ if(isset($_POST['Alumno']))
         // datos a agregar a la tabla convenio
         $pag= $_POST['idpago'];
         $cout=$_POST['cantidad'];
-        $sql = "INSERT INTO `Alumnos` (`Id_alumno`, `nombre_alumno`, `apellido_alumno`, `calle`, `no_exterior`, `no_interior`, `colonia`, `codigo_postal`, `estado`, `municipio`, `area`) VALUES ('$nocontrol','$nombre', '$apellido', '$calle', '$no_exterior', '$no_interior', '$colonia', '$codigo', '$esta', '$muni', '$area')";
-        mysql_query($sql);
-        $sql2 = "INSERT INTO `convenio` (`id_alumno`, `cuota`, `id_pago`) VALUES ('$nocontrol', '$cout', '$pag')";
+        $sql = "INSERT INTO alumnos(`Id_alumno`, `nombre_alumno`, `apellido_alumno`, `calle`, `no_exterior`, `no_interior`, `colonia`, `codigo_postal`, `estado`, `municipio`, `area`) VALUES ('$nocontrol','$nombre', '$apellido', '$calle', '$no_exterior', '$no_interior', '$colonia', '$codigo', '$esta', '$muni', '$area')";
+        mysql_query($sql) or die (mysql_error());
+        $sql2 = "INSERT INTO convenio(`id_alumno`, `cuota`, `id_pago`) VALUES ('$nocontrol', '$cout', '$pag')";
         mysql_query($sql2);
         echo "Registro realizado correctamente, alumno agregado con numero de control: '$nocontrol'.";  
                 

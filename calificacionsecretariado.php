@@ -10,7 +10,7 @@ $result =  mysql_query($sql);
         $combobit .=" <option value='".$row[0]."'>".$row[1]."</option>";
     }
 
-    $sql="SELECT id_maestro, concat(nombre_maestro, ' ', apellido_maestro) FROM `maestros` where tipo_maestro='Secretariado'";
+    $sql="SELECT id_maestro, concat(nombre_maestro, ' ', apellido_maestro) FROM maestros where tipo_maestro='Secretariado'";
     $result =  mysql_query($sql); 
 
     $combobit2=" <option value='0'></option>";
@@ -19,7 +19,7 @@ $result =  mysql_query($sql);
         $combobit2 .=" <option value='".$row[0]."'>".$row[1]."</option>";
     }
 
-    $sql="SELECT id_alumno, concat(nombre_alumno, ' ', apellido_alumno) FROM `alumnos` where area = 'Secretariado'";
+    $sql="SELECT id_alumno, concat(nombre_alumno, ' ', apellido_alumno) FROM alumnos where area = 'Secretariado'";
     $result =  mysql_query($sql); 
 
     $combobit3 =" <option value='0'></option>";

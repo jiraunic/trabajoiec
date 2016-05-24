@@ -12,9 +12,8 @@ if(isset($_POST['Maestro']))
         $nombre = $_POST['Nombre'];
         $apellido = $_POST['Apellido'];
         $tipomaestro = $_POST['tipoma'];
-        $sql = "INSERT INTO maestros (nombre_maestro, apellido_maestro, tipo_maestro) VALUES ('$nombre', '$apellido', '$tipomaestro')";
+        $sql = "INSERT INTO maestros(nombre_maestro, apellido_maestro, tipo_maestro) VALUES ('$nombre', '$apellido', '$tipomaestro')";
         mysql_query($sql);
- 
         echo 'Maestro agregado correctamente.';           
     }
 }

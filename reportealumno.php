@@ -114,6 +114,7 @@ switch ($mespago) {
 		break;
 	
 }
+
 $mespago= $mespago." del ".$ano;
 // obtenemos la cuota del alumno si el pago a realizar es de la mensualidad
 if ($tipomovimiento=='1') {
@@ -127,6 +128,7 @@ $result =  mysql_query($sql);
 $row1 = mysql_fetch_row($result);
 $rest = $cuot - $import-$row1[0];
 }
+
 if ($row1[0]>=$cuot and $movimiento==1) {
 	header("location:inicio.php");
 }
@@ -142,6 +144,8 @@ else
 	{
 		$diasmulta=0;
 	}
+}
+
 
 // obtenemos el nombre completo del alumno y el area en el que se ubica, por ejemplo preparatoria, profesional o secretariado
 $sql="SELECT CONCAT(nombre_alumno, ' ', apellido_alumno), area FROM alumnos where id_alumno='$nocontrol'";
@@ -222,12 +226,8 @@ $pdf->Cell(70, 10, '_____________________________________', 0);
 $pdf->Ln(10);
 $pdf->Cell(70, 10, $row1[0], 0, 'c', true);
 $pdf->Output();
+
 $sql = "INSERT INTO alumnopago (id_alumno, id_pago, monto, fecha) VALUES ('$nocontrol', '3', '$import', '$mespago')";
 mysql_query($sql); 
-}
-
-
-
-}
 
 ?>

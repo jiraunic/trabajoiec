@@ -1,7 +1,7 @@
 <?php
 include_once "Conexion.php";
 
-$sql="SELECT id_alumno, concat(nombre_alumno, ' ', apellido_alumno) FROM `alumnos` WHERE area='Preparatoria'";
+$sql="SELECT id_alumno, concat(nombre_alumno, ' ', apellido_alumno) FROM alumnos WHERE area='Preparatoria'";
     $result =  mysql_query($sql); 
 
     $combobit3 =" <option value='0'></option>";

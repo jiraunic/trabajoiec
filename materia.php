@@ -12,7 +12,7 @@ if(isset($_POST['Materia']))
         $nombre = $_POST['Nombre'];
         $modulo = $_POST['Modulo'];
         $area   = $_POST['idarea'];
-        $sql = "INSERT INTO materias (Nombre_Materia, Modulo, area) VALUES ('$nombre', '$modulo', '$area')";
+        $sql = "INSERT INTO materias(Nombre_Materia, Modulo, area) VALUES ('$nombre', '$modulo', '$area')";
         mysql_query($sql);
  
         echo 'Materia registrada correctamente.'; 

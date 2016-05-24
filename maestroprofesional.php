@@ -10,7 +10,7 @@ $result =  mysql_query($sql);
         $combobit .=" <option value='".$row[0]."'>".$row[1]."</option>";
     }
 
-    $sql="SELECT id_maestro, concat(nombre_maestro, ' ', apellido_maestro) FROM `maestros` where tipo_maestro= 'Profesional'";
+    $sql="SELECT id_maestro, concat(nombre_maestro, ' ', apellido_maestro) FROM maestros where tipo_maestro= 'Profesional'";
     $result =  mysql_query($sql); 
 
     $combobit2=" <option value='0'></option>";
