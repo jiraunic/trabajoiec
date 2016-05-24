@@ -15,8 +15,7 @@ if ($result=mysql_query($sql))
 
 }
 
-if ($count==1) {
-	echo $count;
+if ($count == 1) {
     header("location:inicio.php");  
 }
 else
