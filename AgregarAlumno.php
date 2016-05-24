@@ -1,15 +1,3 @@
-<?php
-include_once "conexion.php";
-
-$sql="SELECT id_pago, descripcion_pago from catalogopago";
-$result =  mysql_query($sql); 
-
-    $combobit=" <option value='0'></option>";
-    $numero =0;
-    while ($row = mysql_fetch_row($result)){ 
-        $combobit .=" <option value='".$row[0]."'>".$row[1]."</option>";
-    }
-?>
 <?php include("cabecera.php"); ?>
 <title>Agreagar Alumno</title>
 <h1>Agregar Alumno</h1>
